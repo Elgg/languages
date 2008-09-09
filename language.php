@@ -20,7 +20,8 @@
 	$limit = (int)get_input('limit', 10);
 	$langcode = get_input('langcode');
 	
-	$title = elgg_view_title(elgg_echo($langcode));
+	$titletxt = sprintf(elgg_echo('languages:missing'), elgg_echo($langcode));
+	$title = elgg_view_title($titletxt);
 	
 	$missing = get_missing_language_keys($langcode);
 	
@@ -42,5 +43,5 @@
 	
 	$body .= elgg_view_entity_list($missing_obj, count($missing), $offset, $limit, false);
 	
-	page_draw(elgg_echo($langcode),elgg_view_layout("two_column_left_sidebar", '', $title . $body));
+	page_draw($titletxt,elgg_view_layout("two_column_left_sidebar", '', $title . $body));
 ?>

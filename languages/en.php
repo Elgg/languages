@@ -13,6 +13,7 @@
 	
 			'languages' => 'Language tool',
 	
+			'languages:missing' => "Translations missing in %s",
 	);
 					
 	add_translation("en",$english);
