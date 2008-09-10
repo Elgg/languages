@@ -22,7 +22,7 @@
 
 	$info .= "<p><b><a href=\"{$CONFIG->url}pg/languages/language/{$entity->title}/\">" . elgg_echo($entity->title) . "</a></b></p>";
 	
-	$info .= "<div>" . $entity->completeness . "% ". elgg_echo('complete') ."</div>";
+	if ($entity->title!='en') $info .= "<div>" . (float)$entity->completeness . "% ". elgg_echo('complete') ."</div>";
 
 	echo elgg_view_listing($icon, $info);
 ?>
