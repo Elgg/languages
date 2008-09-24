@@ -20,7 +20,7 @@
 		  )
 		);
 
-	$info .= "<p><b>{$entity->title}</a></b></p>";
+	$info .= "<p><b>{$entity->title}</b></p>";
 	
 	$info .= "<div>" . $entity->description ."</div>";
 
